@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VfQ-bT-ciQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7Jq-gc-cVb">
+            <objects>
+                <navigationController id="VfQ-bT-ciQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U9l-VM-bz4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K7a-WR-slI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEb-c9-TVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-772" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LW背景图片的虚化效果" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xHx-9k-TcA">
+                                <rect key="frame" x="54" y="518" width="267" height="30"/>
+                                <color key="tintColor" red="1" green="0.023817677209999999" blue="0.84873543250000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xHx-9k-TcA" secondAttribute="height" multiplier="263:29" id="kYx-cr-JZm"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setBackGroundColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="Pau-GM-X5e"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.7999999999999998" minValue="-5" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Neo-Bd-7ir">
+                                <rect key="frame" x="54" y="564" width="267" height="30"/>
+                                <color key="tintColor" red="0.3303162147" green="1" blue="0.21306148750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Neo-Bd-7ir" secondAttribute="height" multiplier="263:29" id="Eu1-M2-c72"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setBackGroundColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="hvi-Pn-eNw"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="28" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="l0H-PB-gOv">
+                                <rect key="frame" x="54" y="612" width="267" height="30"/>
+                                <color key="tintColor" red="0.043963579459999999" green="0.1451630662" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="l0H-PB-gOv" secondAttribute="height" multiplier="263:29" id="ibM-Et-z1p"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setBackGroundColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="FVP-Lp-PwJ"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fi2-SD-Gfc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="427"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fi2-SD-Gfc" secondAttribute="height" multiplier="375:427" id="ltm-Ny-vjF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6X2-jP-Cpj">
+                                <rect key="frame" x="93" y="140" width="189" height="227"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6X2-jP-Cpj" secondAttribute="height" multiplier="189:227" id="wd9-ik-d71"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xHx-9k-TcA" secondAttribute="trailing" constant="40" id="0to-Ix-e8Q"/>
+                            <constraint firstItem="fi2-SD-Gfc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="207-Tr-UnI"/>
+                            <constraint firstItem="6X2-jP-Cpj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="76" id="2Aq-va-tpd"/>
+                            <constraint firstItem="l0H-PB-gOv" firstAttribute="top" secondItem="Neo-Bd-7ir" secondAttribute="bottom" constant="19" id="Fph-aY-ROy"/>
+                            <constraint firstAttribute="trailing" secondItem="fi2-SD-Gfc" secondAttribute="trailing" id="Mc0-35-MBE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6X2-jP-Cpj" secondAttribute="trailing" constant="77" id="TqD-QW-xs6"/>
+                            <constraint firstItem="Neo-Bd-7ir" firstAttribute="top" secondItem="xHx-9k-TcA" secondAttribute="bottom" constant="17" id="cew-TE-Mha"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l0H-PB-gOv" secondAttribute="trailing" constant="40" id="g4Z-Gk-mkI"/>
+                            <constraint firstItem="l0H-PB-gOv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="gAq-Ne-d5l"/>
+                            <constraint firstItem="fi2-SD-Gfc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="jIV-pb-9fs"/>
+                            <constraint firstItem="xHx-9k-TcA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="knX-PY-Wvz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Neo-Bd-7ir" secondAttribute="trailing" constant="40" id="kvx-mm-71D"/>
+                            <constraint firstItem="xHx-9k-TcA" firstAttribute="top" secondItem="fi2-SD-Gfc" secondAttribute="bottom" constant="27" id="rHX-5f-Wm0"/>
+                            <constraint firstItem="Neo-Bd-7ir" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="tzs-C9-HSM"/>
+                            <constraint firstItem="6X2-jP-Cpj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="77" id="wSi-Je-5mc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8jS-M7-nVd"/>
+                    <connections>
+                        <outlet property="blurSlider" destination="l0H-PB-gOv" id="Jys-4u-29z"/>
+                        <outlet property="blurView" destination="fi2-SD-Gfc" id="9SZ-5W-ceR"/>
+                        <outlet property="saturationSlider" destination="Neo-Bd-7ir" id="K9L-at-x2s"/>
+                        <outlet property="textImage" destination="6X2-jP-Cpj" id="niH-Jw-fB4"/>
+                        <outlet property="tintSlider" destination="xHx-9k-TcA" id="0Jt-WN-x17"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.80000000000000004" y="139.880059970015"/>
+        </scene>
+    </scenes>
+</document>
